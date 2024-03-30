@@ -1,7 +1,5 @@
-# Created by https://www.gitignore.io/api/r,python,visualstudiocode
-# Edit at https://www.gitignore.io/?templates=r,python,visualstudiocode
+# Initially taken from Github's Python gitignore file
 
-### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -24,8 +22,6 @@ parts/
 sdist/
 var/
 wheels/
-pip-wheel-metadata/
-share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -58,24 +54,34 @@ coverage.xml
 *.mo
 *.pot
 
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
 # Scrapy stuff:
 .scrapy
 
 # Sphinx documentation
 docs/_build/
+docs/api/
 
 # PyBuilder
 target/
 
-# pyenv
-.python-version
+# Jupyter Notebook
+.ipynb_checkpoints
 
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+docs/.python-version
 
 # celery beat schedule file
 celerybeat-schedule
@@ -83,17 +89,20 @@ celerybeat-schedule
 # SageMath parsed files
 *.sage.py
 
+# Environments
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
 # Spyder project settings
 .spyderproject
 .spyproject
 
 # Rope project settings
 .ropeproject
-
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
 
 # mkdocs documentation
 /site
@@ -105,59 +114,22 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.idea/
+toy*.py
+.DS_Store
+post/
+toy*.ipynb
+data/
+*.c
+.nes_cache
+toy*.yml
+*.tmp
 
-### R ###
-# History files
-.Rhistory
-.Rapp.history
+shell/jina-wizard.sh
+/junit/
+/tests/junit/
+/docs/chapters/proto/docs.md
 
-# Session Data files
-.RData
-.RDataTmp
-
-# User-specific files
-.Ruserdata
-
-# Example code in package build process
-*-Ex.R
-
-# Output files from R CMD build
-/*.tar.gz
-
-# Output files from R CMD check
-/*.Rcheck/
-
-# RStudio files
-.Rproj.user/
-
-# produced vignettes
-vignettes/*.html
-vignettes/*.pdf
-
-# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
-.httr-oauth
-
-# knitr and R markdown default cache directories
-*_cache/
-/cache/
-
-# Temporary files created by R markdown
-*.utf8.md
-*.knit.md
-
-### R.Bookdown Stack ###
-# R package: bookdown caching files
-/*_files/
-
-### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-
-# End of https://www.gitignore.io/api/r,python,visualstudiocode
+# IntelliJ IDEA
+*.iml
+.idea
